@@ -29,3 +29,22 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.New("welcome.html").Parse(welcomeTemplate))
 	tmpl.Execute(w, pv)
 }
+
+func ContactPage(w http.ResponseWriter, r *http.Request) {
+	if r.Method == http.MethodPost {
+		// Handleing the contact form submission
+		name := r.FormValue("name")
+		email := r.FormValue("email")
+		message := r.FormValue("message")
+
+		//save data to DB
+		fmt.Printf("Name: %s\nEmail: %s\nMessage: %s\n", name, email, message)
+
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+		return
+	}
+
+	// For GET request, displaying contact page
+	tmpl := template.Must(template.New("contact.html").Parse(contactTemplate))
+	tmpl.Execute(w, nil)
+}
