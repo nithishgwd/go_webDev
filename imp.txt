@@ -1,0 +1,21 @@
+ 1  git -v
+    2  git -version 
+    3  git --version 
+    4  git clone https://github.com/nithishgwd/go_webDev.git
+    5  cd go_webDev/simple_go_web/
+    6  ls
+    7  nohup ./my_web_app &
+    8  chmod +x my_web_app
+    9  nohup ./my_web_app &
+   10  ./my_web_app 
+   11  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz
+   12  sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz
+   13  go build -o my_app
+   14  sudo apt  install golang-go
+   15  sudo apt-get update
+   16  sudo apt  install golang-go
+   17  go build -o ubuntu-binary-myapp
+   18  ./ubuntu-binary-myapp 
+   19  nohup ./ubuntu-binary-myapp &
+   20  history
+nohup ./my_web_app > my_web_app.log 2>&1 &
