@@ -29,7 +29,7 @@ const welcomeTemplate = `
 	<title>{{.Title}}</title>
 </head>
 <body>
-	<h1>Hello, {{.Name}}! Welcome to our website.</h1>
+	<h1>Hello, {{.Name}}! Welcome to SIGNIFY.</h1>
 </body>
 </html>
 `
