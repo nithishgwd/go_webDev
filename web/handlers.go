@@ -21,10 +21,18 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
 	firstName := r.FormValue("first_name")
 	lastName := r.FormValue("last_name")
 
-	pv := PageVariables{
-		Title: "Welcome Page",
-		Name:  fmt.Sprintf("%s %s", firstName, lastName),
-	}
+	serverName := "Server 1" //server name
+
+    pv := struct {
+        PageVariables
+        ServerName string
+    }{
+        PageVariables: PageVariables{
+            Title: "Welcome Page",
+            Name:  fmt.Sprintf("%s %s", firstName, lastName),
+        },
+        ServerName: serverName, // Passing the server name to the template
+    }
 
 	tmpl := template.Must(template.New("welcome.html").Parse(welcomeTemplate))
 	tmpl.Execute(w, pv)
