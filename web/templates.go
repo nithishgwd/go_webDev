@@ -4,7 +4,6 @@ const indexTemplate = `
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Server One/title>
     <title>{{.Title}}</title>
 </head>
 <body>
@@ -31,6 +30,8 @@ const welcomeTemplate = `
 </head>
 <body>
 	<h1>Hello, {{.Name}}! Welcome to SIGNIFY.</h1>
+    <h2>Signify is the world leader in lighting for professionals, consumers and lighting for the Internet of Things</h2>
+    <p>Server: {{.ServerName}}</p>
 </body>
 </html>
 `
