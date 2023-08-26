@@ -4,6 +4,7 @@ const indexTemplate = `
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Server One/title>
     <title>{{.Title}}</title>
 </head>
 <body>
